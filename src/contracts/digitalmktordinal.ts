@@ -1,3 +1,6 @@
+// the goods is the Estates, the substance is NFT token to be transfered to
+//the buyer after payment is confirmed by the seller
+
 import {
     Addr,
     prop,
@@ -105,3 +108,5 @@ export class DigitalMktOrdinalNFT extends OrdinalNFT {
         }
     }
 }
+
+//next is to integrate it to the front-end so the user can interract with it

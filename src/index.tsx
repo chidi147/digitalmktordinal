@@ -5,7 +5,16 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 
 import { DigitalMktOrdinalNFT } from './contracts/digitalmktordinal';
+import artifact from '../artifacts/digitalmktordinal.json'
+import { bsv, Scrypt } from 'scrypt-ts';
 
+DigitalMktOrdinalNFT.loadArtifact(artifact)
+
+Scrypt.init({
+  apiKey:process.env
+    .REACT_APP_API_KEY || 'testnet_1xjW2R4nx4sk0KzIMzvtTqJDlJfcqezmXHe1vgvgBGiPH7ydb',
+  network: bsv.Networks.testnet,
+})
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
